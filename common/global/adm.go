@@ -8,6 +8,7 @@ import (
 	"go-api/common/config"
 	"go-api/pkg/queue/redis"
 	"gorm.io/gorm"
+	red "github.com/gomodule/redigo/redis"
 )
 
 const (
@@ -23,6 +24,8 @@ var Eloquent *gorm.DB
 var GADMCron *cron.Cron
 
 var Redis *cache.Redis
+
+var RedisPool *red.Pool
 
 var Queue1 *redis.Queue
 
